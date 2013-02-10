@@ -9,7 +9,7 @@
 #include "AppDelegate.h"
 
 #include "cocos2d.h"
-#include "HelloWorldScene.h"
+#include "IntroLayer.h"
 
 USING_NS_CC;
 
@@ -29,8 +29,9 @@ bool AppDelegate::applicationDidFinishLaunching()
     pDirector->setOpenGLView(CCEGLView::sharedOpenGLView());
 
     // enable High Resource Mode(2x, such as iphone4) and maintains low resource on other devices.
+    pDirector->enableRetinaDisplay(false);
     // pDirector->enableRetinaDisplay(true);
-
+    
     // turn on display FPS
     pDirector->setDisplayStats(true);
 
@@ -38,7 +39,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     pDirector->setAnimationInterval(1.0 / 60);
 
     // create a scene. it's an autorelease object
-    CCScene *pScene = HelloWorld::scene();
+    CCScene *pScene = IntroLayer::scene();
 
     // run
     pDirector->runWithScene(pScene);

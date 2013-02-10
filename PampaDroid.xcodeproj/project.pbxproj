@@ -210,6 +210,7 @@
 		BD94355A1685D18800CDB3D9 /* HudLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD9435581685D18800CDB3D9 /* HudLayer.cpp */; };
 		BD94355D1685D1DA00CDB3D9 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD94355B1685D1DA00CDB3D9 /* GameScene.cpp */; };
 		BD9435601685D25900CDB3D9 /* GameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD94355E1685D25900CDB3D9 /* GameLayer.cpp */; };
+		BD9C91CD16C72AFD0032A74B /* Hero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD9C91CB16C72AFD0032A74B /* Hero.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -667,6 +668,8 @@
 		BD94357F1685F04700CDB3D9 /* pd_tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pd_tiles.png; sourceTree = "<group>"; };
 		BD981BA516C60F9900ECB3A5 /* ActionSprite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionSprite.h; sourceTree = "<group>"; };
 		BD981BA616C60FCA00ECB3A5 /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
+		BD9C91CB16C72AFD0032A74B /* Hero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hero.cpp; sourceTree = "<group>"; };
+		BD9C91CC16C72AFD0032A74B /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hero.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1580,6 +1583,8 @@
 				BD94355E1685D25900CDB3D9 /* GameLayer.cpp */,
 				BD981BA516C60F9900ECB3A5 /* ActionSprite.h */,
 				BD981BA616C60FCA00ECB3A5 /* Defines.h */,
+				BD9C91CC16C72AFD0032A74B /* Hero.h */,
+				BD9C91CB16C72AFD0032A74B /* Hero.cpp */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1851,6 +1856,7 @@
 				BD94355A1685D18800CDB3D9 /* HudLayer.cpp in Sources */,
 				BD94355D1685D1DA00CDB3D9 /* GameScene.cpp in Sources */,
 				BD9435601685D25900CDB3D9 /* GameLayer.cpp in Sources */,
+				BD9C91CD16C72AFD0032A74B /* Hero.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
