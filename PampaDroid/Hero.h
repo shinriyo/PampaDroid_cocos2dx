@@ -11,9 +11,13 @@
 
 #include <iostream>
 #import "ActionSprite.h"
+#include "cocos2d.h"
 
 class Hero : public ActionSprite
 {
-}
+public:
+    virtual bool init();
+    CREATE_FUNC(CCSprite);
+};
 
 #endif /* defined(__PampaDroid__File__) */

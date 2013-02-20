@@ -9,6 +9,7 @@
 #define __GameLayer_H__ 
 
 #include "cocos2d.h"
+#include "Hero.h"
 
 class GameLayer : public cocos2d::CCLayer
 {
@@ -30,6 +31,8 @@ private:
     void initTileMap();
     cocos2d::CCTMXTiledMap* _tileMap;
     cocos2d::CCSpriteBatchNode *_actors;
+    Hero *_hero;
+    void initHero();
 };
 
 #endif // __GameLayerH__

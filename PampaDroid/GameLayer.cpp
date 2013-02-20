@@ -17,6 +17,7 @@ bool GameLayer::init()
 {
     if ( !CCLayer::init() )
 	{
+        this->isTouchEnabled();
         initTileMap();
         
         CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("pd_sprites.plist");
@@ -45,11 +46,20 @@ void GameLayer::initTileMap()
 
 bool GameLayer::ccTouchBegan(CCTouch *touch, CCEvent *event)
 {
+    _hero->attack();
 	return true;
 }
 
 void GameLayer::ccTouchEnded(CCTouch *touch, CCEvent *event)
 {
+}
+
+void GameLayer::initHero()
+{
+    _hero = Hero::create();
+    _actors->addChild(_hero);
+    _hero->position = ccp(_hero.centerToSides, 80);
+    _hero->idle();
 }
 
 GameLayer::~GameLayer()
