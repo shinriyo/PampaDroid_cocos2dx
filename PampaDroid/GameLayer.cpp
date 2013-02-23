@@ -21,8 +21,8 @@ bool GameLayer::init()
         initTileMap();
         
         CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("pd_sprites.plist");
-        //_actors = CCSpriteBatchNode::spriteSheetWithFile("pd_sprites.pvr.ccz");
         _actors = CCSpriteBatchNode::batchNodeWithFile("pd_sprites.pvr.ccz");
+        //_actors = CCSpriteBatchNode::spriteSheetWithFile("pd_sprites.pvr.ccz");
         _actors->getTexture()->setAliasTexParameters();
         this->addChild(_actors, -5);
 	}
@@ -56,9 +56,10 @@ void GameLayer::ccTouchEnded(CCTouch *touch, CCEvent *event)
 
 void GameLayer::initHero()
 {
-    _hero = Hero::create();
+    _hero = (Hero*)Hero::create();
     _actors->addChild(_hero);
-    _hero->position = ccp(_hero.centerToSides, 80);
+    //_hero->setPosition(ccp(_hero.centerToSides, 80));
+    _hero->setPosition(ccp(_hero->centerToSides, 80));
     _hero->idle();
 }
 

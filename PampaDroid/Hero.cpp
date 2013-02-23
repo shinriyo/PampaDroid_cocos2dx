@@ -20,13 +20,14 @@ bool Hero::init()
         //CCArray *idleFrames = CCArray::arrayWithCapacity(6);
         CCArray *idleFrames = CCArray::createWithCapacity(6);
         for (i = 0; i < 6; i++) {
-            CCSpriteFrame *frame = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName(CCString::createWithFormat("hero_idle_%02d.png", i));
+            CCString *str = CCString::createWithFormat("hero_idle_%02d.png", i);
+            CCSpriteFrame *frame = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName((char*)str);
             idleFrames->addObject(frame);
         }
         
         CCAnimation *idleAnimation = CCAnimation::createWithSpriteFrames(idleFrames->create(), 1.0/12.0);
         //this->idleAction = CCRepeatForever::actionWithAction(CCAnimate::actionWithAnimation->idleAnimation));
-        this->idleAction = CCRepeatForever::create(CCAnimate::create(idleAnimation));
+        this->idleAction()->runAction(CCRepeatForever::create(CCAnimate::create(idleAnimation)));
         
         this->centerToBottom = 39.0;
         this->centerToSides = 29.0;

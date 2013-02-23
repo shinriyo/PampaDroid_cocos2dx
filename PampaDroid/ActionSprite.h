@@ -17,11 +17,11 @@ class ActionSprite : public cocos2d::CCSprite
 public:
 
     //actions
-    static cocos2d::CCScene* idleAction();
-    static cocos2d::CCScene* attackAction();
-    static cocos2d::CCScene* walkAction();
-    static cocos2d::CCScene* hurtAction();
-    static cocos2d::CCScene* knockedOutAction();
+    static cocos2d::CCNode* idleAction();
+    static cocos2d::CCNode* attackAction();
+    static cocos2d::CCNode* walkAction();
+    static cocos2d::CCNode* hurtAction();
+    static cocos2d::CCNode* knockedOutAction();
 
     //states
     _ActionState actionState;

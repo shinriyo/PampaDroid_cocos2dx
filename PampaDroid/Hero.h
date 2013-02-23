@@ -16,6 +16,8 @@
 class Hero : public ActionSprite
 {
 public:
+    Hero();
+    ~Hero();
     virtual bool init();
     CREATE_FUNC(CCSprite);
 };
