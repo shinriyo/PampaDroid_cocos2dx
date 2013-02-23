@@ -2,39 +2,20 @@
 //  ActionSprite.h
 //  PampaDroid
 //
-//  Created by sugita on 13/02/09.
+//  Created by shinriyo on 13/02/09.
 //
 //
-
+#pragma once
 #ifndef PampaDroid_ActionSprite_h
 #define PampaDroid_ActionSprite_h
-#import <QuartzCore/QuartzCore.h>
 #include "cocos2d.h"
 #include "Defines.h"
 
 class ActionSprite : public cocos2d::CCSprite
 {
 public:
-
-    // actions
-    static cocos2d::CCAction* idleAction;
-    static cocos2d::CCAction* attackAction;
-    static cocos2d::CCAction* walkAction;
-    static cocos2d::CCAction* hurtAction;
-    static cocos2d::CCAction* knockedOutAction;
-
-    // states
-    _ActionState _actionState;
-
-    //attributes
-    float walkSpeed;
-    float hitPoints;
-    float damage;
-    
-
-    // measurements
-    float centerToSides;
-    float centerToBottom;
+    ActionSprite(void);
+    ~ActionSprite(void);
     
     // action methods
     void idle();
@@ -43,15 +24,32 @@ public:
     void knockout();
     void walkWithDirection(CGPoint direction);
 
-private:
-    
-    // movement
-    CGPoint _velocity;
-    CGPoint _desiredPosition;
+    // actions
+    CC_SYNTHESIZE_RETAIN(cocos2d::CCAction*, _idleAction, IdleAction);
+    CC_SYNTHESIZE_RETAIN(cocos2d::CCAction*, _attackAction, AttackAction);
+    CC_SYNTHESIZE_RETAIN(cocos2d::CCAction*, _walkAction, WalkAction);
+    CC_SYNTHESIZE_RETAIN(cocos2d::CCAction*, _hurtAction, HurtAction);
+    CC_SYNTHESIZE_RETAIN(cocos2d::CCAction*, _knockedOutAction, KnockedOutAction);
 
+    // states
+    CC_SYNTHESIZE(ActionState, _actionState, ActionState);
+   
+    // movement
+    CC_SYNTHESIZE(cocos2d::CCPoint, _velocity, Velocity);
+    CC_SYNTHESIZE(cocos2d::CCPoint, _desiredPosition, DesiredPosition);
+   
+    
+    // attributes
+    CC_SYNTHESIZE(float, _walkSpeed, WalkSpeed);
+    CC_SYNTHESIZE(float, _hitPoints, HitPoints);
+    CC_SYNTHESIZE(float, _damage, Damage);
 
     // scheduled methods
     void update(cocos2d::CCTime dt);
+    
+    // measurements
+    CC_SYNTHESIZE(float, _centerToSides, CenterToSides);
+    CC_SYNTHESIZE(float, _centerToBottom, CenterToBottom);
 };
 
 #endif

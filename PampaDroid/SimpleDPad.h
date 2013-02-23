@@ -12,7 +12,7 @@
 #include <iostream>
 #include "cocos2d.h"
 #include "Defines.h"
-
+// http://article.ityran.com/archives/2847
 
 class SimpleDPad : public cocos2d::CCObject
 {

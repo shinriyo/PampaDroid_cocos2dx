@@ -33,11 +33,11 @@ bool GameLayer::init()
 void GameLayer::initTileMap()
 {
     _tileMap = CCTMXTiledMap::create("pd_tilemap.tmx");
-    CCObject* object;
-    CCARRAY_FOREACH(_tileMap->getChildren(), object)
+    CCObject* pObject;
+    CCARRAY_FOREACH(_tileMap->getChildren(), pObject)
     {
         // is this map child a tile layer?
-        CCTMXLayer* layer = dynamic_cast<CCTMXLayer*>(object);
+        CCTMXLayer* layer = dynamic_cast<CCTMXLayer*>(pObject);
         layer->getTexture()->setAliasTexParameters();
     }
     
