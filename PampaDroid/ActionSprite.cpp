@@ -36,3 +36,17 @@ void ActionSprite::attack()
        _actionState = kActionStateAttack;
    }
 }
+
+void ActionSprite::walkWithDirection(CGPoint direction)
+{
+    if (_actionState == kActionStateIdle) {
+        this->stopAllActions();
+        this->runAction(_walkAction);
+        _actionState = kActionStateWalk;
+    }
+    if (_actionState == kActionStateWalk) {
+        _velocity = ccp(direction.x * _walkSpeed, direction.y * _walkSpeed);
+        if (_velocity.x >= 0) this->setScaleX(1.0);
+        else this->setScaleX(-1.0);
+    }
+}

@@ -47,6 +47,16 @@ bool Hero::init()
         CCAnimation *attackAnimation = CCAnimation::createWithSpriteFrames(attackFrames, 1.0 / 24.0);
         this->setAttackAction(CCSequence::create(CCAnimate::create(attackAnimation), CCCallFunc::create(this, callfunc_selector(Hero::idle)), NULL));
         
+        // walk animation
+        CCArray *walkFrames = CCArray::arrayWithCapacity(8);
+        for (i = 0; i < 8; i++) {
+            CCSpriteFrame *frame = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName(CCString::createWithFormat("hero_walk_%02d.png", i)->getCString());
+            walkFrames->addObject(frame);
+        }
+        
+        CCAnimation *walkAnimation = CCAnimation::createWithSpriteFrames(walkFrames, 1.0 / 24.0);
+        this->setAttackAction(CCSequence::create(CCAnimate::create(walkAnimation), CCCallFunc::create(this, callfunc_selector(Hero::walkWithDirection)), NULL));
+        
         bRet = true;
     } while (0);
     
