@@ -7,10 +7,12 @@
 
 #import "HudLayer.h"
 
-using namespace std;
-using namespace CocosDenshion;
-
 USING_NS_CC;
+
+HudLayer::HudLayer(void)
+{
+    _dPad = NULL;
+}
 
 bool HudLayer::init()
 {

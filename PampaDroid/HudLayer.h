@@ -14,6 +14,7 @@
 class HudLayer : public cocos2d::CCLayer
 {
 public:
+    HudLayer();
     ~HudLayer();
     //virtual bool init();
     

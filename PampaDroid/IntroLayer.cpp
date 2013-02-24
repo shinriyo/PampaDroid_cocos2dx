@@ -2,7 +2,7 @@
 //  IntroLayer.cpp
 //  PampaDroid
 //
-//  Created by sugita on 12/12/22.
+//  Created by shinriyo on 12/12/22.
 //  Copyright 2012年 __MyCompanyName__. All rights reserved.
 
 #import "IntroLayer.h"
@@ -56,7 +56,7 @@ void IntroLayer::onEnter()
 
 void IntroLayer::makeTransition(CCTime dt)
 {
-    CCDirector::sharedDirector()->replaceScene(CCTransitionFade::create(1.0, GameScene::scene(), ccWHITE));
+//    CCDirector::sharedDirector()->replaceScene(CCTransitionFade::create(1.0, GameScene::scene(), ccWHITE));
 }
 
 IntroLayer::~IntroLayer()

@@ -48,7 +48,7 @@ bool SimpleDPad::initWithFile(CCString *filename, float radius)
         bRet = true;
     } while(0);
     
-    return = bRet;
+    return bRet;
 }
 
 void SimpleDPad::onEnterTransitionDidFinish()
@@ -102,43 +102,43 @@ void SimpleDPad::updateDirectionForTouchLocation(CCPoint location)
     float degrees = -1 * CC_RADIANS_TO_DEGREES(radians);
     
     if (degrees <= 22.5 && degrees >= -22.5) {
-        //right
+        // right
         _direction = ccp(1.0, 0.0);
     }
     else if (degrees > 22.5 && degrees < 67.5)
     {
-        //bottomright
+        // bottomright
         _direction = ccp(1.0, -1.0);
     }
     else if (degrees >= 67.5 && degrees <= 112.5)
     {
-        //bottom
+        // bottom
         _direction = ccp(0.0, -1.0);
     }
     else if (degrees > 112.5 && degrees < 157.5)
     {
-        //bottomleft
+        // bottomleft
         _direction = ccp(-1.0, -1.0);
     }
     else if (degrees >= 157.5 || degrees <= -157.5)
     {
-        //left
+        // left
         _direction = ccp(-1.0, 0.0);
     }
     else if (degrees < -22.5 && degrees > -67.5)
     {
-        //topright
+        // topright
         _direction = ccp(1.0, 1.0);
     }
     else if (degrees <= -67.5 && degrees >= -112.5)
     {
-        //top
+        // top
         _direction = ccp(0.0, 1.0);
     }
     else if (degrees < -112.5 && degrees > -157.5)
     {
-        //topleft
+        // topleft
         _direction = ccp(-1.0, 1.0);
     }
-    _delegate->simpleDPad(this->didChangeDirectionTo(_direction));
+    _delegate->didChangeDirectionTo(this, _direction);
 }

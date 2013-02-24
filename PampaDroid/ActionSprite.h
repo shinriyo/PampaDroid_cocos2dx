@@ -31,6 +31,9 @@ public:
     CC_SYNTHESIZE_RETAIN(cocos2d::CCAction*, _hurtAction, HurtAction);
     CC_SYNTHESIZE_RETAIN(cocos2d::CCAction*, _knockedOutAction, KnockedOutAction);
 
+    // scheduled methods
+    void update(cocos2d::CCTime dt);
+    
     // states
     CC_SYNTHESIZE(ActionState, _actionState, ActionState);
    
@@ -43,10 +46,7 @@ public:
     CC_SYNTHESIZE(float, _walkSpeed, WalkSpeed);
     CC_SYNTHESIZE(float, _hitPoints, HitPoints);
     CC_SYNTHESIZE(float, _damage, Damage);
-
-    // scheduled methods
-    void update(cocos2d::CCTime dt);
-    
+   
     // measurements
     CC_SYNTHESIZE(float, _centerToSides, CenterToSides);
     CC_SYNTHESIZE(float, _centerToBottom, CenterToBottom);

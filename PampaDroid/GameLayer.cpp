@@ -6,10 +6,8 @@
 //  Copyright 2012年 __MyCompanyName__. All rights reserved.
 
 #import "GameLayer.h"
-#include "SimpleAudioEngine.h"
 
 using namespace std;
-using namespace CocosDenshion;
 
 USING_NS_CC;
 
@@ -58,8 +56,7 @@ void GameLayer::initHero()
 {
     _hero = (Hero*)Hero::create();
     _actors->addChild(_hero);
-    //_hero->setPosition(ccp(_hero.centerToSides, 80));
-    _hero->setPosition(ccp(_hero->centerToSides, 80));
+    _hero->setPosition(ccp(_hero->getCenterToSides(), 80));
     _hero->idle();
 }
 

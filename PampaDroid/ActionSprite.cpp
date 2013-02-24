@@ -7,6 +7,7 @@
 //
 
 #include "ActionSprite.h"
+using namespace cocos2d;
 
 ActionSprite::ActionSprite(void)
 {
@@ -23,9 +24,10 @@ void ActionSprite::idle()
        this->stopAllActions();
        this->runAction(_idleAction);
        _actionState = kActionStateIdle;
-       _velocity = CGPointZero;
+       _velocity = CCPointZero;
    }
 }
+
 void ActionSprite::attack()
 {
    if (_actionState == kActionStateIdle || _actionState == kActionStateAttack || _actionState == kActionStateWalk ) {
