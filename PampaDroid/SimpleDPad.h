@@ -14,33 +14,40 @@
 #include "Defines.h"
 // http://article.ityran.com/archives/2847
 
-class SimpleDPad : public cocos2d::CCObject
+class SimpleDPad;
+
+class SimpleDPadDelegate
 {
 public:
-    
-    //add right after the @interface SimpleDPad : CCSprite and before the opening curly bracket
-//    <CCTargetedTouchDelegate>
-    
-    
-    //add after closing curly bracket but before the @end
-    //id <SimpleDPadDelegate> delegate;
-    
-    int dPadWithFile(cocos2d::CCString* filename, float radius);
-private:
-    CGPoint _direction;
-    //add inside the @interface within the curly brackets
-    float _radius;
-    bool _isHeld;
-    int initWithFile(cocos2d::CCString* filename, float radius);
+    virtual void didChangeDirectionTo(SimpleDPad *simpleDPad, cocos2d::CCPoint direction) = 0;
+    virtual void isHoldingDirection(SimpleDPad *simpleDPad, cocos2d::CCPoint direction) = 0;
+    virtual void simpleDPadTouchEnded(SimpleDPad *simpleDPad) = 0;
 };
 
-class SimpleDPadDelegate : public cocos2d::CCTouchDelegate
+class SimpleDPad : public cocos2d::CCSprite, public cocos2d::CCTargetedTouchDelegate
 {
 public:
-    SimpleDPadDelegate() {};
-    ~SimpleDPadDelegate() {};
-    void simpleDPad(SimpleDPad *simpleDPad, CGPoint direction);
-//    void simpleDPad(SimpleDPad *simpleDPad, CGPoint direction);
-    void simpleDPadTouchEnded(SimpleDPad *simpleDPad);
+    SimpleDPad(void);
+    ~SimpleDPad(void);
+
+    static SimpleDPad* dPadWithFile(cocos2d::CCString *filename, float radius);
+    bool initWithFile(cocos2d::CCString* filename, float radius);
+    
+    void onEnterTransitionDidFinish();
+    void onExit();
+    void update(float dt);
+    
+    virtual bool ccTouchBegan(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent);
+    virtual void ccTouchMoved(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent);
+    virtual void ccTouchEnded(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent);
+   
+    void updateDirectionForTouchLocation(cocos2d::CCPoint location);
+    
+    CC_SYNTHESIZE(SimpleDPadDelegate*, _delegate, Delegate);
+    CC_SYNTHESIZE(bool, _isHeld, IsHeld);
+protected:
+    float _radius;
+    cocos2d::CCPoint _direction;
 };
+
 #endif /* defined(__PampaDroid__SimpleDPad__) */

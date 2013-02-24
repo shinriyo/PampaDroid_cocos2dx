@@ -12,24 +12,17 @@
 #include "GameLayer.h"
 #include "HudLayer.h"
 
-class GameScene : public cocos2d::CCLayer
+class GameScene : public cocos2d::CCScene
 {
 public:
+    GameScene();
     ~GameScene();
-    virtual bool init();  
     
-    // touch detection
-   	virtual bool ccTouchBegan(cocos2d::CCTouch *touch, cocos2d::CCEvent *event);
-	virtual void ccTouchEnded(cocos2d::CCTouch *touch, cocos2d::CCEvent *event);
-    
-   	static cocos2d::CCScene* scene();
-    // implement the "static node()" method manually
-    // LAYER_NODE_FUNC does not exist in version2.x
-    // LAYER_NODE_FUNC(GameScene);
+    virtual bool init();
 	CREATE_FUNC(GameScene);
-private:
-    GameLayer *_gameLayer;
-    HudLayer *_hudLayer;
+   
+    CC_SYNTHESIZE(GameLayer*, _gameLayer, GameLayer);
+    CC_SYNTHESIZE(HudLayer*, _hudLayer, HudLayer);
 };
 
 #endif // __GameSceneH__

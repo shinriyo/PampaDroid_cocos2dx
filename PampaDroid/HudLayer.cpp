@@ -6,7 +6,6 @@
 //  Copyright 2012年 __MyCompanyName__. All rights reserved.
 
 #import "HudLayer.h"
-#include "SimpleAudioEngine.h"
 
 using namespace std;
 using namespace CocosDenshion;
@@ -15,15 +14,20 @@ USING_NS_CC;
 
 bool HudLayer::init()
 {
-    if ( !CCLayer::init() )
-	{
-		return false;
-	}
-
-    // ask director the window size
-    CCSize size = CCDirector::sharedDirector()->getWinSize();
-
-    return true;
+    bool bRet = false;
+    do
+    {
+        CC_BREAK_IF(!CCLayer::init());
+        
+        _dPad = SimpleDPad::dPadWithFile(CCString::create("pd_dpad.png"), 64);
+        _dPad->setPosition(ccp(64.0, 64.0));
+        _dPad->setOpacity(100);
+        this->addChild(_dPad);
+        
+        bRet = true;
+    } while (0);
+    
+    return bRet;
 }
 
 HudLayer::~HudLayer()

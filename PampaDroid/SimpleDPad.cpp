@@ -7,97 +7,136 @@
 //
 
 #include "SimpleDPad.h"
+using namespace cocos2d;
 
-//add inside the @implementation
-SimpleDPad::dPadWithFile(cocos2d::CCString* fileName, float radius)
+SimpleDPad::SimpleDPad(void)
 {
-    return initWithFile->fileName(radius);
+    _delegate = NULL;
 }
 
-SimpleDPad::initWithFile(cocos2d::CCString* filename, float radius)
+SimpleDPad::~SimpleDPad(void)
 {
-    if ( !CGLayer:init() )
-	{
+}
+
+SimpleDPad* SimpleDPad::dPadWithFile(CCString *fileName, float radius)
+{
+    SimpleDPad *pRet = new SimpleDPad();
+    if (pRet && pRet->initWithFile(fileName, radius))
+    {
+        return pRet;
+    }
+    else
+    {
+        delete pRet;
+        pRet = NULL;
+        return NULL;
+    }
+}
+
+bool SimpleDPad::initWithFile(CCString *filename, float radius)
+{
+    bool bRet = false;
+    do
+    {
+        CC_BREAK_IF(!CCSprite::initWithFile(filename->getCString()));
+                    
         _radius = radius;
-        _direction = CGPointZero;
-        _isHeld = NO;
-        this->scheduleUpdate;
-    }
-    return self;
-}
-
-void　onEnterTransitionDidFinish
-{
-    CCDirector::sharedDirector->touchDispatcher(this, 1, true);
-}
-
-void onExit()
-{
-    CCDirector::sharedDirector->removeDelegate(this);
-}
-
-void update(ccTime dt)
-{
-    if (_isHeld) {
-        _delegate->simpleDPad(this, _direction);
-    }
-}
-
-bool ccTouchBegan(UITouch* touch, UIEvent* event)
-{
-    CGPoint location = CCDirector::sharedDirector->convertToGL(touch->locationInView(touch->view)));
+        _direction = CCPointZero;
+        _isHeld = false;
+        this->scheduleUpdate();
+        
+        bRet = true;
+    } while(0);
     
-    float distanceSQ = ccpDistanceSQ(location, position_);
-    if (distanceSQ <= _radius * _radius) {
-        //get angle 8 directions
-        this->pdateDirectionForTouchLocation(location);
+    return = bRet;
+}
+
+void SimpleDPad::onEnterTransitionDidFinish()
+{
+    CCDirector::sharedDirector()->getTouchDispatcher()->addTargetedDelegate(this, 1, true);
+}
+
+void SimpleDPad::onExit()
+{
+    CCDirector::sharedDirector()->getTouchDispatcher()->removeDelegate(this);
+}
+
+void SimpleDPad::update(float dt)
+{
+    if (_isHeld)
+    {
+        _delegate->isHoldingDirection(this, _direction);
+    }
+}
+
+bool SimpleDPad::ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent)
+{
+    CCPoint location = pTouch->getLocation();
+    
+    float distanceSQ = ccpDistanceSQ(location, this->getPosition());
+    if (distanceSQ <= _radius * _radius)
+    {
+        this->updateDirectionForTouchLocation(location);
         _isHeld = true;
         return true;
     }
     return false;
 }
 
-
-void ccTouchMoved(UITouch* touch, UIEvent* event)
+void SimpleDPad::ccTouchMoved(CCTouch *pTouch, CCEvent *pEvent)
 {
-    CGPoint location = CCDirector::sharedDirector->convertToGL(touch->locationInView(touch->view)));
-    this->updateDirectionForTouchLocation9location);
+    CCPoint location = pTouch->getLocation();
+    this->updateDirectionForTouchLocation(location);
 }
 
-void ccTouchEnded(UITouch* touch, UIEvent* event)
+void SimpleDPad::ccTouchEnded(CCTouch *pTouch, CCEvent *pEvent)
 {
-    _direction = CGPointZero;
+    _direction = CCPointZero;
     _isHeld = false;
     _delegate->simpleDPadTouchEnded(this);
 }
 
-void updateDirectionForTouchLocation(CGPoint location)
+void SimpleDPad::updateDirectionForTouchLocation(CCPoint location)
 {
-    float radians = ccpToAngle(ccpSub(location, position_));
+    float radians = ccpToAngle(ccpSub(location, this->getPosition()));
     float degrees = -1 * CC_RADIANS_TO_DEGREES(radians);
     
     if (degrees <= 22.5 && degrees >= -22.5) {
         //right
         _direction = ccp(1.0, 0.0);
-    } else if (degrees > 22.5 && degrees < 67.5) {
+    }
+    else if (degrees > 22.5 && degrees < 67.5)
+    {
         //bottomright
         _direction = ccp(1.0, -1.0);
-    } else if (degrees >= 67.5 && degrees <= 112.5) {
+    }
+    else if (degrees >= 67.5 && degrees <= 112.5)
+    {
         //bottom
         _direction = ccp(0.0, -1.0);
-    } else if (degrees > 112.5 && degrees < 157.5) {
+    }
+    else if (degrees > 112.5 && degrees < 157.5)
+    {
         //bottomleft
         _direction = ccp(-1.0, -1.0);
-    } else if (degrees >= 157.5 || degrees <= -157.5) {
+    }
+    else if (degrees >= 157.5 || degrees <= -157.5)
+    {
         //left
         _direction = ccp(-1.0, 0.0);
-    } else if (degrees < -22.5 && degrees > -67.5) {
+    }
+    else if (degrees < -22.5 && degrees > -67.5)
+    {
         //topright
         _direction = ccp(1.0, 1.0);
-    } else if (degrees <= -67.5 && degrees >= -112.5) {
+    }
+    else if (degrees <= -67.5 && degrees >= -112.5)
+    {
         //top
         _direction = ccp(0.0, 1.0);
-    } else if (degrees < -112.5 && degrees > -157.5) {
+    }
+    else if (degrees < -112.5 && degrees > -157.5)
+    {
         //topleft
         _direction = ccp(-1.0, 1.0);
     }

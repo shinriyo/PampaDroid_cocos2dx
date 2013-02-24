@@ -9,17 +9,21 @@
 #define __HudLayer_H__ 
 
 #include "cocos2d.h"
+#include "SimpleDPad.h"
 
 class HudLayer : public cocos2d::CCLayer
 {
 public:
     ~HudLayer();
-    virtual bool init();  
+    //virtual bool init();
     
     // implement the "static node()" method manually
     // LAYER_NODE_FUNC does not exist in version2.x
     // LAYER_NODE_FUNC(HudLayer);
 	CREATE_FUNC(HudLayer);
+    
+    bool init();
+    CC_SYNTHESIZE(SimpleDPad*, _dPad, DPad);
 };
 
 #endif // __HudLayerH__
