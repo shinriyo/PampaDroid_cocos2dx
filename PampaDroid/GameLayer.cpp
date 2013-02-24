@@ -63,3 +63,21 @@ void GameLayer::initHero()
 GameLayer::~GameLayer()
 {
 }
+
+// part2
+void GameLayer::simpleDPad(SimpleDPad* simpleDPad, CGPoint direction)
+{
+    _hero->walkWithDirection(direction);
+}
+
+void GameLayer::simpleDPadTouchEnded(SimpleDPad* simpleDPad)
+{
+    if (_hero->getActionState() == kActionStateWalk) {
+        _hero->idle();
+    }
+}
+
+void simpleDPad(SimpleDPad* simpleDPad, CGPoint direction)
+{
+    _hero->walkWithDirection(direction);
+}

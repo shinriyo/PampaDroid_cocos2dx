@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23DC879F16D8DCC900F6000D /* ActionSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23DC879E16D8DCC800F6000D /* ActionSprite.cpp */; };
+		23DC87A216D8F27C00F6000D /* SimpleDPad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23DC87A016D8F27C00F6000D /* SimpleDPad.cpp */; };
 		BD94329D1685D0E400CDB3D9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD94329C1685D0E400CDB3D9 /* QuartzCore.framework */; };
 		BD94329F1685D0E400CDB3D9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD94329E1685D0E400CDB3D9 /* OpenGLES.framework */; };
 		BD9432A11685D0E400CDB3D9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9432A01685D0E400CDB3D9 /* OpenAL.framework */; };
@@ -214,6 +216,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23DC879E16D8DCC800F6000D /* ActionSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ActionSprite.cpp; sourceTree = "<group>"; };
+		23DC87A016D8F27C00F6000D /* SimpleDPad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleDPad.cpp; sourceTree = "<group>"; };
+		23DC87A116D8F27C00F6000D /* SimpleDPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleDPad.h; sourceTree = "<group>"; };
 		BD9432981685D0E400CDB3D9 /* PampaDroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PampaDroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD94329C1685D0E400CDB3D9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BD94329E1685D0E400CDB3D9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1582,9 +1587,12 @@
 				BD94355F1685D25900CDB3D9 /* GameLayer.h */,
 				BD94355E1685D25900CDB3D9 /* GameLayer.cpp */,
 				BD981BA516C60F9900ECB3A5 /* ActionSprite.h */,
+				23DC879E16D8DCC800F6000D /* ActionSprite.cpp */,
 				BD981BA616C60FCA00ECB3A5 /* Defines.h */,
 				BD9C91CC16C72AFD0032A74B /* Hero.h */,
 				BD9C91CB16C72AFD0032A74B /* Hero.cpp */,
+				23DC87A116D8F27C00F6000D /* SimpleDPad.h */,
+				23DC87A016D8F27C00F6000D /* SimpleDPad.cpp */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1857,6 +1865,8 @@
 				BD94355D1685D1DA00CDB3D9 /* GameScene.cpp in Sources */,
 				BD9435601685D25900CDB3D9 /* GameLayer.cpp in Sources */,
 				BD9C91CD16C72AFD0032A74B /* Hero.cpp in Sources */,
+				23DC879F16D8DCC900F6000D /* ActionSprite.cpp in Sources */,
+				23DC87A216D8F27C00F6000D /* SimpleDPad.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1931,6 +1941,7 @@
 				GCC_PREFIX_HEADER = PampaDroid/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = PampaDroid/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/PampaDroid/libs/cocos2dx/platform/third_party/ios/libraries\"",
@@ -1953,6 +1964,7 @@
 				GCC_PREFIX_HEADER = PampaDroid/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = PampaDroid/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/PampaDroid/libs/cocos2dx/platform/third_party/ios/libraries\"",

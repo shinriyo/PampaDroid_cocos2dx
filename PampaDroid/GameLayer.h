@@ -10,6 +10,7 @@
 
 #include "cocos2d.h"
 #include "Hero.h"
+#include "SimpleDPad.h"
 
 class GameLayer : public cocos2d::CCLayer
 {
@@ -33,6 +34,10 @@ private:
     cocos2d::CCSpriteBatchNode *_actors;
     Hero *_hero;
     void initHero();
+    
+    void simpleDPad(SimpleDPad* simpleDPad, CGPoint direction);
+    void impleDPadTouchEnded(SimpleDPad* simpleDPad);
+    void simpleDPad(SimpleDPad* simpleDPad, CGPoint direction);
 };
 
 #endif // __GameLayerH__
