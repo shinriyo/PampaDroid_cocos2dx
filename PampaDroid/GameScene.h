@@ -2,7 +2,7 @@
 //  GameScene.h
 //  PampaDroid
 //
-//  Created by sugita on 12/12/22.
+//  Created by shinriyo on 12/12/22.
 //  Copyright 2012年 __MyCompanyName__. All rights reserved.
 
 #ifndef __GameScene_H__
@@ -15,8 +15,8 @@
 class GameScene : public cocos2d::CCScene
 {
 public:
-    GameScene();
-    ~GameScene();
+    GameScene(void);
+    ~GameScene(void);
     
     virtual bool init();
 	CREATE_FUNC(GameScene);

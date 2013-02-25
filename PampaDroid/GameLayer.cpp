@@ -2,7 +2,7 @@
 //  GameLayer.cpp
 //  PampaDroid
 //
-//  Created by sugita on 12/12/22.
+//  Created by shinriyo on 12/12/22.
 //  Copyright 2012年 __MyCompanyName__. All rights reserved.
 
 #import "GameLayer.h"
@@ -65,6 +65,7 @@ GameLayer::~GameLayer()
 }
 
 // part2
+/*
 void GameLayer::simpleDPad(SimpleDPad* simpleDPad, CGPoint direction)
 {
     _hero->walkWithDirection(direction);
@@ -81,3 +82,4 @@ void simpleDPad(SimpleDPad* simpleDPad, CGPoint direction)
 {
     _hero->walkWithDirection(direction);
 }
+*/

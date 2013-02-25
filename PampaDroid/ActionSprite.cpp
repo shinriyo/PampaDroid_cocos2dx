@@ -18,6 +18,10 @@ ActionSprite::ActionSprite(void)
     _knockedOutAction = NULL;
 }
 
+ActionSprite::~ActionSprite(void)
+{
+}
+
 void ActionSprite::idle()
 {
    if (_actionState != kActionStateIdle)
@@ -54,7 +58,7 @@ void ActionSprite::walkWithDirection(CGPoint direction)
         else this->setScaleX(-1.0);
     }
 }
-
+/*
 void ActionSprite::update(CCTime dt)
 {
     if (_actionState == kActionStateWalk)
@@ -62,3 +66,4 @@ void ActionSprite::update(CCTime dt)
         _desiredPosition = ccpAdd(this->getPosition(), ccpMult(_velocity, dt));
     }
 }
+*/

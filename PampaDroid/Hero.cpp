@@ -2,7 +2,7 @@
 //  File.cpp
 //  PampaDroid
 //
-//  Created by sugita on 13/02/10.
+//  Created by shinriyo on 13/02/10.
 //
 //
 

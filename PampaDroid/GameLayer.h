@@ -34,10 +34,11 @@ private:
     cocos2d::CCSpriteBatchNode *_actors;
     Hero *_hero;
     void initHero();
-    
+   /*
     void simpleDPad(SimpleDPad* simpleDPad, CGPoint direction);
-    void impleDPadTouchEnded(SimpleDPad* simpleDPad);
+    void simpleDPadTouchEnded(SimpleDPad* simpleDPad);
     void simpleDPad(SimpleDPad* simpleDPad, CGPoint direction);
+    */
 };
 
 #endif // __GameLayerH__

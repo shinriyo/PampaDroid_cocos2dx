@@ -2,7 +2,7 @@
 //  Defines.h
 //  PampaDroid
 //
-//  Created by sugita on 13/02/09.
+//  Created by shinriyo on 13/02/09.
 //
 //
 #pragma once
