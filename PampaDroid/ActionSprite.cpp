@@ -24,37 +24,37 @@ ActionSprite::~ActionSprite(void)
 
 void ActionSprite::idle()
 {
-   if (_actionState != kActionStateIdle)
+   if (getActionState() != kActionStateIdle)
    {
        this->stopAllActions();
        this->runAction(_idleAction);
-       _actionState = kActionStateIdle;
-       _velocity = CCPointZero;
+       setActionState(kActionStateIdle);
+       setVelocity(CCPointZero);
    }
 }
 
 void ActionSprite::attack()
 {
-   if (_actionState == kActionStateIdle || _actionState == kActionStateAttack || _actionState == kActionStateWalk )
+   if (getActionState() == kActionStateIdle || getActionState() == kActionStateAttack || getActionState() == kActionStateWalk )
    {
        this->stopAllActions();
        this->runAction(_attackAction);
-       _actionState = kActionStateAttack;
+       setActionState(kActionStateAttack);
    }
 }
 
 void ActionSprite::walkWithDirection(cocos2d::CCPoint direction)
 {
-    if (_actionState == kActionStateIdle)
+    if (getActionState() == kActionStateIdle)
     {
         this->stopAllActions();
         this->runAction(_walkAction);
-        _actionState = kActionStateWalk;
+        setActionState(kActionStateWalk);
     }
-    if (_actionState == kActionStateWalk)
+    if (getActionState() == kActionStateWalk)
     {
-        _velocity = ccp(direction.x * _walkSpeed, direction.y * _walkSpeed);
-        if (_velocity.x >= 0)
+        setVelocity(ccp(direction.x * _walkSpeed, direction.y * _walkSpeed));
+        if (getVelocity().x >= 0)
         {
             this->setScaleX(1.0);
         }

@@ -47,8 +47,8 @@ void GameLayer::initTileMap()
     CCARRAY_FOREACH(_tileMap->getChildren(), pObject)
     {
         // is this map child a tile layer?
-        CCTMXLayer* layer = dynamic_cast<CCTMXLayer*>(pObject);
-        layer->getTexture()->setAliasTexParameters();
+        CCTMXLayer *child = (CCTMXLayer*)pObject;
+        child->getTexture()->setAliasTexParameters();
     }
     
     this->addChild(_tileMap, -6);

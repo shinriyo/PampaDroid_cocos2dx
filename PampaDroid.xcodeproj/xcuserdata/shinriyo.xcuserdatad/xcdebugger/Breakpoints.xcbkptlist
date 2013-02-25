@@ -13,7 +13,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "23"
          endingLineNumber = "23"
-         landmarkName = "ActionSprite::idle()"
+         landmarkName = "ActionSprite::~ActionSprite(void)"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -39,7 +39,20 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "62"
          endingLineNumber = "62"
-         landmarkName = "ActionSprite::update(CCTime dt)"
+         landmarkName = "ActionSprite::walkWithDirection(cocos2d::CCPoint direction)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "PampaDroid/ActionSprite.cpp"
+         timestampString = "383500005.20653"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "53"
+         endingLineNumber = "53"
+         landmarkName = "ActionSprite::walkWithDirection(cocos2d::CCPoint direction)"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

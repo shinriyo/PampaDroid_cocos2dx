@@ -18,12 +18,17 @@ class GameLayer : public cocos2d::CCLayer, public SimpleDPadDelegate
 public:
     GameLayer(void);
     ~GameLayer(void);
-    virtual bool init();  
+    bool init();  
+    void initTileMap();
+    cocos2d::CCTMXTiledMap* _tileMap;
     
     // touch detection
    	virtual bool ccTouchBegan(cocos2d::CCTouch *touch, cocos2d::CCEvent *event);
 	virtual void ccTouchEnded(cocos2d::CCTouch *touch, cocos2d::CCEvent *event);
-    
+
+    cocos2d::CCSpriteBatchNode *_actors;
+    Hero *_hero;
+    void initHero();
 //   	static cocos2d::CCScene* scene();
     
     // implement the "static node()" method manually
@@ -37,17 +42,7 @@ public:
     virtual void simpleDPadTouchEnded(SimpleDPad *simpleDPad);
     
     CC_SYNTHESIZE(HudLayer*, _hud, Hud);
-private:
-    void initTileMap();
-    cocos2d::CCTMXTiledMap* _tileMap;
-    cocos2d::CCSpriteBatchNode *_actors;
-    Hero *_hero;
-    void initHero();
-   /*
-    void simpleDPad(SimpleDPad* simpleDPad, CGPoint direction);
-    void simpleDPadTouchEnded(SimpleDPad* simpleDPad);
-    void simpleDPad(SimpleDPad* simpleDPad, CGPoint direction);
-    */
+
 };
 
 #endif // __GameLayerH__
