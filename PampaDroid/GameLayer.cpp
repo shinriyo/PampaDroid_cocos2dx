@@ -11,13 +11,25 @@ using namespace std;
 
 USING_NS_CC;
 
+GameLayer::GameLayer(void)
+{
+}
+
+GameLayer::~GameLayer(void)
+{
+    // TODO:
+    //    this->unscheduleUpdate();
+}
+
 bool GameLayer::init()
 {
     if ( !CCLayer::init() )
 	{
         this->isTouchEnabled();
         initTileMap();
-        
+        // TODO:
+        //this->scheduleUpdate();
+ 
         CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("pd_sprites.plist");
         _actors = CCSpriteBatchNode::batchNodeWithFile("pd_sprites.pvr.ccz");
         //_actors = CCSpriteBatchNode::spriteSheetWithFile("pd_sprites.pvr.ccz");
@@ -60,10 +72,23 @@ void GameLayer::initHero()
     _hero->idle();
 }
 
-GameLayer::~GameLayer()
+void GameLayer::didChangeDirectionTo(SimpleDPad *simpleDPad, CCPoint direction)
 {
+    _hero->walkWithDirection(direction);
 }
 
+void GameLayer::isHoldingDirection(SimpleDPad *simpleDPad, CCPoint direction)
+{
+    _hero->walkWithDirection(direction);
+}
+
+void GameLayer::simpleDPadTouchEnded(SimpleDPad *simpleDPad)
+{
+    if (_hero->getActionState() == kActionStateWalk)
+    {
+        _hero->idle();
+    }
+}
 // part2
 /*
 void GameLayer::simpleDPad(SimpleDPad* simpleDPad, CGPoint direction)
@@ -81,5 +106,18 @@ void GameLayer::simpleDPadTouchEnded(SimpleDPad* simpleDPad)
 void simpleDPad(SimpleDPad* simpleDPad, CGPoint direction)
 {
     _hero->walkWithDirection(direction);
+}
+ 
+void update(ccTime dt)
+{
+    _hero->update(dt);
+    this->updatePositions();
+}
+ 
+void updatePositions()
+{
+    float posX = MIN(_tileMap.mapSize.width * _tileMap.tileSize.width - _hero.centerToSides, MAX(_hero.centerToSides, _hero.desiredPosition.x));
+    float posY = MIN(3 * _tileMap.tileSize.height + _hero.centerToBottom, MAX(_hero.centerToBottom, _hero.desiredPosition.y));
+    _hero.position = ccp(posX, posY);
 }
 */

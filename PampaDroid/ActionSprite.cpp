@@ -43,7 +43,7 @@ void ActionSprite::attack()
    }
 }
 
-void ActionSprite::walkWithDirection(CGPoint direction)
+void ActionSprite::walkWithDirection(cocos2d::CCPoint direction)
 {
     if (_actionState == kActionStateIdle)
     {
@@ -54,8 +54,14 @@ void ActionSprite::walkWithDirection(CGPoint direction)
     if (_actionState == kActionStateWalk)
     {
         _velocity = ccp(direction.x * _walkSpeed, direction.y * _walkSpeed);
-        if (_velocity.x >= 0) this->setScaleX(1.0);
-        else this->setScaleX(-1.0);
+        if (_velocity.x >= 0)
+        {
+            this->setScaleX(1.0);
+        }
+        else
+        {
+            this->setScaleX(-1.0);
+        }
     }
 }
 /*

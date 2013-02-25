@@ -5,13 +5,12 @@
 //  Created by shinriyo on 2/23/13.
 //
 //
+#pragma once
 
 #ifndef __PampaDroid__SimpleDPad__
 #define __PampaDroid__SimpleDPad__
 
-#include <iostream>
 #include "cocos2d.h"
-#include "Defines.h"
 // http://article.ityran.com/archives/2847
 
 class SimpleDPad;
@@ -45,6 +44,7 @@ public:
     
     CC_SYNTHESIZE(SimpleDPadDelegate*, _delegate, Delegate);
     CC_SYNTHESIZE(bool, _isHeld, IsHeld);
+    
 protected:
     float _radius;
     cocos2d::CCPoint _direction;

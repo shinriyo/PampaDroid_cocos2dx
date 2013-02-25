@@ -11,6 +11,14 @@ using namespace std;
 
 USING_NS_CC;
 
+Hero::Hero(void)
+{
+}
+
+Hero::~Hero(void)
+{
+}
+
 bool Hero::init()
 {
     bool bRet = false;

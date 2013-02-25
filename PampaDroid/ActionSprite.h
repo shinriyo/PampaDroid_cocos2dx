@@ -22,7 +22,7 @@ public:
     void attack();
     void hurtWithDamage(float damage);
     void knockout();
-    void walkWithDirection(CGPoint direction);
+    void walkWithDirection(cocos2d::CCPoint direction);
 
     // actions
     CC_SYNTHESIZE_RETAIN(cocos2d::CCAction*, _idleAction, IdleAction);
