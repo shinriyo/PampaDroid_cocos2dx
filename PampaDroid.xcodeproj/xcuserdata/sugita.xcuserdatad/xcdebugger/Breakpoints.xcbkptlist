@@ -30,22 +30,22 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "PampaDroid/GameLayer.h"
-         timestampString = "382079965.790615"
+         timestampString = "383448409.939876"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "32"
-         endingLineNumber = "32">
+         startingLineNumber = "41"
+         endingLineNumber = "41">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "PampaDroid/GameLayer.cpp"
-         timestampString = "382080207.442209"
+         timestampString = "383448409.939876"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "23"
-         endingLineNumber = "23"
+         startingLineNumber = "35"
+         endingLineNumber = "35"
          landmarkName = "GameLayer::init()"
          landmarkType = "5">
       </FileBreakpoint>
@@ -65,11 +65,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "PampaDroid/Hero.cpp"
-         timestampString = "382324985.94228"
+         timestampString = "383448409.939876"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "22"
-         endingLineNumber = "22"
+         startingLineNumber = "30"
+         endingLineNumber = "30"
          landmarkName = "Hero::init()"
          landmarkType = "5">
       </FileBreakpoint>
@@ -78,11 +78,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "PampaDroid/Hero.cpp"
-         timestampString = "382928178.862742"
+         timestampString = "383448409.939876"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "29"
-         endingLineNumber = "29"
+         startingLineNumber = "37"
+         endingLineNumber = "37"
          landmarkName = "Hero::init()"
          landmarkType = "5">
       </FileBreakpoint>
@@ -91,11 +91,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "PampaDroid/GameLayer.cpp"
-         timestampString = "382929852.93199"
+         timestampString = "383448409.939876"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "59"
-         endingLineNumber = "59"
+         startingLineNumber = "71"
+         endingLineNumber = "71"
          landmarkName = "GameLayer::initHero()"
          landmarkType = "5">
       </FileBreakpoint>
@@ -104,11 +104,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "PampaDroid/GameLayer.cpp"
-         timestampString = "383014894.061437"
+         timestampString = "383448409.939876"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "61"
-         endingLineNumber = "61"
+         startingLineNumber = "73"
+         endingLineNumber = "73"
          landmarkName = "GameLayer::initHero()"
          landmarkType = "5">
       </FileBreakpoint>

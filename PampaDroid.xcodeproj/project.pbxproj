@@ -213,6 +213,7 @@
 		BD94355D1685D1DA00CDB3D9 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD94355B1685D1DA00CDB3D9 /* GameScene.cpp */; };
 		BD9435601685D25900CDB3D9 /* GameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD94355E1685D25900CDB3D9 /* GameLayer.cpp */; };
 		BD9C91CD16C72AFD0032A74B /* Hero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD9C91CB16C72AFD0032A74B /* Hero.cpp */; };
+		BDBB7C5D16DAEE5D00FB4117 /* pd_dpad.png in Resources */ = {isa = PBXBuildFile; fileRef = BDBB7C5C16DAEE5D00FB4117 /* pd_dpad.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -666,15 +667,15 @@
 		BD94355E1685D25900CDB3D9 /* GameLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameLayer.cpp; sourceTree = "<group>"; };
 		BD94355F1685D25900CDB3D9 /* GameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLayer.h; sourceTree = "<group>"; };
 		BD94357A1685F04700CDB3D9 /* pd_dpad-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pd_dpad-hd.png"; sourceTree = "<group>"; };
-		BD94357B1685F04700CDB3D9 /* pd_dpad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pd_dpad.png; sourceTree = "<group>"; };
-		BD94357C1685F04700CDB3D9 /* pd_sprites.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = pd_sprites.plist; sourceTree = "<group>"; };
 		BD94357D1685F04700CDB3D9 /* pd_sprites.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = pd_sprites.pvr.ccz; sourceTree = "<group>"; };
-		BD94357E1685F04700CDB3D9 /* pd_tilemap.tmx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = pd_tilemap.tmx; sourceTree = "<group>"; };
-		BD94357F1685F04700CDB3D9 /* pd_tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pd_tiles.png; sourceTree = "<group>"; };
 		BD981BA516C60F9900ECB3A5 /* ActionSprite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionSprite.h; sourceTree = "<group>"; };
 		BD981BA616C60FCA00ECB3A5 /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
 		BD9C91CB16C72AFD0032A74B /* Hero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hero.cpp; sourceTree = "<group>"; };
 		BD9C91CC16C72AFD0032A74B /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hero.h; sourceTree = "<group>"; };
+		BDBB7C5C16DAEE5D00FB4117 /* pd_dpad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pd_dpad.png; sourceTree = "<group>"; };
+		BDBB7C5E16DAF5CB00FB4117 /* pd_sprites.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = pd_sprites.plist; sourceTree = "<group>"; };
+		BDBB7C6016DAF5CB00FB4117 /* pd_tilemap.tmx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = pd_tilemap.tmx; sourceTree = "<group>"; };
+		BDBB7C6116DAF5CB00FB4117 /* pd_tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pd_tiles.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1600,12 +1601,12 @@
 		BD9435791685F03900CDB3D9 /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
+				BDBB7C5E16DAF5CB00FB4117 /* pd_sprites.plist */,
+				BDBB7C6016DAF5CB00FB4117 /* pd_tilemap.tmx */,
+				BDBB7C6116DAF5CB00FB4117 /* pd_tiles.png */,
+				BDBB7C5C16DAEE5D00FB4117 /* pd_dpad.png */,
 				BD94357A1685F04700CDB3D9 /* pd_dpad-hd.png */,
-				BD94357B1685F04700CDB3D9 /* pd_dpad.png */,
-				BD94357C1685F04700CDB3D9 /* pd_sprites.plist */,
 				BD94357D1685F04700CDB3D9 /* pd_sprites.pvr.ccz */,
-				BD94357E1685F04700CDB3D9 /* pd_tilemap.tmx */,
-				BD94357F1685F04700CDB3D9 /* pd_tiles.png */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -1672,6 +1673,7 @@
 				BD9432C11685D0E400CDB3D9 /* Icon@2x.png in Resources */,
 				BD9432C31685D0E400CDB3D9 /* iTunesArtwork in Resources */,
 				BD9433551685D0E500CDB3D9 /* ChangeLog in Resources */,
+				BDBB7C5D16DAEE5D00FB4117 /* pd_dpad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
