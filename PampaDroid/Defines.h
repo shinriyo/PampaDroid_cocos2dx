@@ -10,6 +10,7 @@
 #define PampaDroid_Defines_h
 
 #import <QuartzCore/QuartzCore.h>
+//#include "cocos2d.h"
 // 1 - convenience measurements
 #define SCREEN [[CCDirector sharedDirector] winSize]
 #define CENTER ccp(SCREEN.width/2, SCREEN.height/2)
@@ -39,6 +40,8 @@ typedef enum _ActionState {
 typedef struct _BoundingBox {
     CGRect actual;
     CGRect original;
+//    cocos2d::CCRect actual;
+//    cocos2d::CCRect original;
 } BoundingBox;
 
 #endif

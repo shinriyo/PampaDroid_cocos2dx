@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		234A9CB416DBBC7300E6EEC2 /* pd_tilemap.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 234A9CB316DBBC7200E6EEC2 /* pd_tilemap.tmx */; };
 		23DC879F16D8DCC900F6000D /* ActionSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23DC879E16D8DCC800F6000D /* ActionSprite.cpp */; };
 		23DC87A216D8F27C00F6000D /* SimpleDPad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23DC87A016D8F27C00F6000D /* SimpleDPad.cpp */; };
+		BD1AA1F516DD125D009F5A4F /* pd_tilemap.tmx in Resources */ = {isa = PBXBuildFile; fileRef = BD1AA1F416DD125D009F5A4F /* pd_tilemap.tmx */; };
+		BD1AA1F716DD132B009F5A4F /* pd_sprites.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD1AA1F616DD132B009F5A4F /* pd_sprites.plist */; };
 		BD94329D1685D0E400CDB3D9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD94329C1685D0E400CDB3D9 /* QuartzCore.framework */; };
 		BD94329F1685D0E400CDB3D9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD94329E1685D0E400CDB3D9 /* OpenGLES.framework */; };
 		BD9432A11685D0E400CDB3D9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9432A01685D0E400CDB3D9 /* OpenAL.framework */; };
@@ -220,10 +221,11 @@
 /* Begin PBXFileReference section */
 		234A9CB016DBB7E900E6EEC2 /* pd_sprites.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = pd_sprites.pvr.ccz; sourceTree = "<group>"; };
 		234A9CB216DBB7EA00E6EEC2 /* pd_tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pd_tiles.png; sourceTree = "<group>"; };
-		234A9CB316DBBC7200E6EEC2 /* pd_tilemap.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = pd_tilemap.tmx; sourceTree = "<group>"; };
 		23DC879E16D8DCC800F6000D /* ActionSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ActionSprite.cpp; sourceTree = "<group>"; };
 		23DC87A016D8F27C00F6000D /* SimpleDPad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleDPad.cpp; sourceTree = "<group>"; };
 		23DC87A116D8F27C00F6000D /* SimpleDPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleDPad.h; sourceTree = "<group>"; };
+		BD1AA1F416DD125D009F5A4F /* pd_tilemap.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = pd_tilemap.tmx; sourceTree = "<group>"; };
+		BD1AA1F616DD132B009F5A4F /* pd_sprites.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = pd_sprites.plist; sourceTree = "<group>"; };
 		BD9432981685D0E400CDB3D9 /* PampaDroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PampaDroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD94329C1685D0E400CDB3D9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BD94329E1685D0E400CDB3D9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -676,7 +678,6 @@
 		BD9C91CB16C72AFD0032A74B /* Hero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hero.cpp; sourceTree = "<group>"; };
 		BD9C91CC16C72AFD0032A74B /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hero.h; sourceTree = "<group>"; };
 		BDBB7C5C16DAEE5D00FB4117 /* pd_dpad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pd_dpad.png; sourceTree = "<group>"; };
-		BDBB7C5E16DAF5CB00FB4117 /* pd_sprites.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = pd_sprites.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1602,10 +1603,10 @@
 		BD9435791685F03900CDB3D9 /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
+				BD1AA1F416DD125D009F5A4F /* pd_tilemap.tmx */,
 				234A9CB016DBB7E900E6EEC2 /* pd_sprites.pvr.ccz */,
 				234A9CB216DBB7EA00E6EEC2 /* pd_tiles.png */,
-				234A9CB316DBBC7200E6EEC2 /* pd_tilemap.tmx */,
-				BDBB7C5E16DAF5CB00FB4117 /* pd_sprites.plist */,
+				BD1AA1F616DD132B009F5A4F /* pd_sprites.plist */,
 				BDBB7C5C16DAEE5D00FB4117 /* pd_dpad.png */,
 				BD94357A1685F04700CDB3D9 /* pd_dpad-hd.png */,
 			);
@@ -1675,7 +1676,8 @@
 				BD9432C31685D0E400CDB3D9 /* iTunesArtwork in Resources */,
 				BD9433551685D0E500CDB3D9 /* ChangeLog in Resources */,
 				BDBB7C5D16DAEE5D00FB4117 /* pd_dpad.png in Resources */,
-				234A9CB416DBBC7300E6EEC2 /* pd_tilemap.tmx in Resources */,
+				BD1AA1F516DD125D009F5A4F /* pd_tilemap.tmx in Resources */,
+				BD1AA1F716DD132B009F5A4F /* pd_sprites.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1945,7 +1947,7 @@
 				GCC_PREFIX_HEADER = PampaDroid/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = PampaDroid/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/PampaDroid/libs/cocos2dx/platform/third_party/ios/libraries\"",
@@ -1968,7 +1970,7 @@
 				GCC_PREFIX_HEADER = PampaDroid/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = PampaDroid/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/PampaDroid/libs/cocos2dx/platform/third_party/ios/libraries\"",

@@ -18,8 +18,9 @@ class Hero : public ActionSprite
 public:
     Hero(void);
     ~Hero(void);
-    virtual bool init();
-    CREATE_FUNC(CCSprite);
+
+    CREATE_FUNC(Hero);
+    bool init();
 };
 
 #endif /* defined(__PampaDroid__File__) */

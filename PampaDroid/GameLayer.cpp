@@ -13,6 +13,7 @@ USING_NS_CC;
 
 GameLayer::GameLayer(void)
 {
+    _hero = NULL;
 }
 
 GameLayer::~GameLayer(void)
@@ -21,23 +22,26 @@ GameLayer::~GameLayer(void)
     //    this->unscheduleUpdate();
 }
 
+
 bool GameLayer::init()
 {
-    if ( !CCLayer::init() )
-	{
+    bool bRet = false;
+    do
+    {
+        CC_BREAK_IF(!CCLayer::init());
         this->isTouchEnabled();
-        initTileMap();
-        // TODO:
-        //this->scheduleUpdate();
- 
+        this->initTileMap();
+        this->initHero();
+        
         CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("pd_sprites.plist");
-        _actors = CCSpriteBatchNode::batchNodeWithFile("pd_sprites.pvr.ccz");
-        //_actors = CCSpriteBatchNode::spriteSheetWithFile("pd_sprites.pvr.ccz");
+        _actors = CCSpriteBatchNode::create("pd_sprites.pvr.ccz");
         _actors->getTexture()->setAliasTexParameters();
         this->addChild(_actors, -5);
-	}
-
-    return true;
+        
+        bRet = true;
+    } while (0);
+    
+    return bRet;
 }
 
 void GameLayer::initTileMap()

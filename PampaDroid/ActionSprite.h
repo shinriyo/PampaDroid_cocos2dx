@@ -32,11 +32,11 @@ public:
     CC_SYNTHESIZE_RETAIN(cocos2d::CCAction*, _knockedOutAction, KnockedOutAction);
 
     // scheduled methods
-    void update(cocos2d::CCTime dt);
-    
+    void update(float dt);
+ 
     // states
     CC_SYNTHESIZE(ActionState, _actionState, ActionState);
-   
+    
     // movement
     CC_SYNTHESIZE(cocos2d::CCPoint, _velocity, Velocity);
     CC_SYNTHESIZE(cocos2d::CCPoint, _desiredPosition, DesiredPosition);

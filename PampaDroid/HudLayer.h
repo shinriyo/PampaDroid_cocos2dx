@@ -16,7 +16,6 @@ class HudLayer : public cocos2d::CCLayer
 public:
     HudLayer();
     ~HudLayer();
-    //virtual bool init();
     
     // implement the "static node()" method manually
     // LAYER_NODE_FUNC does not exist in version2.x
